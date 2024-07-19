@@ -1,0 +1,73 @@
+<footer>
+    <div class="top container-fluid py-5">
+        <div class="container-lg">
+            <div class="d-flex justify-content-center">
+                <div class="column d-flex px-4">
+                    <p class="mb-0 lh-sm d-flex justify-content-start align-items-end flex-column">
+                        <span>
+                            David Gaisler
+                        </span>
+                    </p>
+                </div>
+
+                <div class="column d-flex px-4">
+                    <p class="mb-0 lh-sm d-flex justify-content-center flex-column">
+                        <span>
+                            <span class="text-white">
+                                DE
+                            </span>
+
+                            <a href="tel: {{ homepage.contact_phone_de }}" class="link-white link-underline-opacity-0 link-underline-opacity-100-hover link-offset-1">
+                                {{ homepage.contact_phone_de }}
+                            </a>
+                        </span>
+
+                        <span>
+                            <span class="text-white">
+                                CZ
+                            </span>
+
+                            <a href="tel: {{ homepage.contact_phone_cz }}" class="link-white link-underline-opacity-0 link-underline-opacity-100-hover link-offset-1">
+                                {{ homepage.contact_phone_cz }}
+                            </a>
+                        </span>
+                    </p>
+                </div>
+
+                <div class="column d-flex px-4">
+                    <p class="mb-0 lh-sm d-flex justify-content-start flex-column">
+                        <span>
+                            <a href="mailto: {{ homepage.contact_email }}" class="link-white link-underline-opacity-0 link-underline-opacity-100-hover link-offset-1">
+                                {{ homepage.contact_email }}
+                            </a>
+                        </span>
+                    </p>
+                </div>
+
+                <div class="column d-flex px-4">
+                    <div class="socials d-inline-flex align-items-start gap-3 justify-content-start">
+                        {% if this.theme.facebook %}
+                            <a href="{{ this.theme.facebook }}" target="_blank" class="d-inline-flex text-decoration-none">
+                                <i class="ph ph-facebook-logo"></i>
+{#                                    <i class="mi mi-facebook icon"></i>#}
+                            </a>
+                        {% endif %}
+
+                        {% if this.theme.instagram %}
+                            <a href="{{ this.theme.instagram }}" target="_blank" class="d-inline-flex text-decoration-none">
+                                <i class="ph ph-instagram-logo"></i>
+{#                                    <i class="mi mi-instagram icon"></i>#}
+                            </a>
+                        {% endif %}
+
+                        {% if this.theme.youtube %}
+                            <a href="{{ this.theme.youtube }}" target="_blank" class="d-inline-flex text-decoration-none">
+                                <i class="ph ph-youtube-logo"></i>
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

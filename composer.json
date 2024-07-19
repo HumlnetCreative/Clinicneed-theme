@@ -1,0 +1,8 @@
+{
+    "name": "lzaplata/handex-theme",
+    "type": "october-theme",
+    "description": "Air conditioners handling company.",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}

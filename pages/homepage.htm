@@ -1,0 +1,158 @@
+url = "/"
+layout = "default"
+title = "Úvod"
+
+[collection slider]
+handle = "Slider\Slide"
+
+[global slider_settings]
+handle = "Slider\Settings"
+
+[section homepage]
+handle = "Homepage"
+
+[contactForm contactform]
+==
+{% if slider.getIterator().count %}
+    <div class="{#container-fluid#} d-block d-md-block"> {# uncomment while slider with horizontal margin #}
+        <div class="slider-swiper-wrapper position-relative {#container-fluid#}"> {# uncomment while slider with horizontal margin #}
+            {% partial "_swiper/slider" slides=slider settings=slider_settings %}
+
+{#            <div class="gradient position-absolute start-0 top-0 w-100 h-100"></div>#}
+
+            <div class="info position-absolute start-50 translate-middle-x d-none d-md-block">
+                <p class="title fw-bold text-start text-white fs-1 mb-0 lh-sm ff-secondary">
+                    {{ "banner.claim"|trans|raw }}
+                </p>
+
+{#                <p class="heading h2 text-center mb-0">#}
+{#                    Zakázková CNC výroba#}
+{#                </p>#}
+            </div>
+        </div>
+    </div>
+{% endif %}
+
+{#{% component "quicknews" %}#}
+
+<div class="container-fluid py-6 about" id="{{ "homepage.title"|trans|slug }}">
+    <div class="container-lg">
+        <h1 class="mb-5">
+            {{ homepage.title }}
+        </h1>
+
+        <div class="mb-5 text-dark fs-2">
+            {{ homepage.about|raw }}
+        </div>
+
+        <div class="mb-6 row row-cols-1 row-cols-lg-3 g-5">
+            {% for service in homepage.services %}
+                <div class="col">
+                    <h2 class="mb-5">
+                        {{ service.title|raw }}
+                    </h2>
+
+                    <p class="mb-0">
+                        <img src="{{ service.image.thumb(390, 259, {"mode": "crop"}) }}" alt="{{ service.image.description }}" class="img-fluid w-100">
+                    </p>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div>
+            <p class="text-dark text-center fs-2 mb-4">
+                {{ homepage.partners_title }}
+            </p>
+
+            <div class="row row-cols-2 row-cols-lg-6 gx-7 gy-2">
+                {% for image in homepage.partners_images %}
+                    <div class="col d-flex align-items-center justify-content-center {{ loop.index == 7 ? 'offset-2' }}">
+                        <img src="{{ image.path }}" alt="{{ image.description }}" class="img-fluid">
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid py-7 contact" id="{{ "homepage.contact"|trans|slug }}">
+    <div class="container-lg">
+        <div class="row gx-6">
+            <div class="col col-lg-4">
+                <p class="mb-0">
+                    <img src="{{ homepage.contact_image.path }}" alt="{{ homepage.contact_image.description }}" class="img-fluid w-100 rounded-circle">
+                </p>
+            </div>
+
+            <div class="col col-lg-8 d-flex align-items-center">
+                <div>
+                    <p class="mb-4 h1">
+                        {{ homepage.contact_name }}
+                    </p>
+
+                    <div class="text-dark fs-2 mb-5">
+                        {{ homepage.contact_text|raw }}
+                    </div>
+
+                    <div class="row row-cols-1 row-cols-lg-2">
+                        <div class="col fs-2 d-flex flex-row gap-3">
+                            <p class="mb-0 icon">
+                                <span class="bg-primary rounded-circle d-flex align-items-center justify-content-center">
+                                    <i class="ph ph-phone-call text-white h2 mb-0"></i>
+                                </span>
+                            </p>
+
+                            <p class="mb-0 lh-sm d-flex justify-content-center flex-column">
+                                <span>
+                                    <span class="text-black">
+                                        DE
+                                    </span>
+
+                                    <a href="tel: {{ homepage.contact_phone_de }}" class="ms-1 link-black link-underline-opacity-100 link-underline-opacity-0-hover link-offset-1">
+                                        {{ homepage.contact_phone_de }}
+                                    </a>
+                                </span>
+
+                                <span>
+                                    <span class="text-black">
+                                        CZ
+                                    </span>
+
+                                    <a href="tel: {{ homepage.contact_phone_cz }}" class="ms-1 link-black link-underline-opacity-100 link-underline-opacity-0-hover link-offset-1">
+                                        {{ homepage.contact_phone_cz }}
+                                    </a>
+                                </span>
+                            </p>
+                        </div>
+
+                        <div class="col fs-2 d-flex flex-row gap-3">
+                            <p class="mb-0 icon">
+                                <span class="bg-primary rounded-circle d-flex align-items-center justify-content-center">
+                                    <i class="ph ph-envelope text-white h2 mb-0"></i>
+                                </span>
+                            </p>
+
+                            <p class="mb-0 lh-sm d-flex justify-content-start flex-column">
+                                <span>
+                                    <a href="mailto: {{ homepage.contact_email }}" class="ms-1 link-black link-underline-opacity-100 link-underline-opacity-0-hover link-offset-1">
+                                        {{ homepage.contact_email }}
+                                    </a>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid py-6 bg-light" id="contact-form">
+    <div class="container-lg">
+        <h2 class="h1 mb-5">
+            {{ "homepage.contact"|trans }}
+        </h2>
+
+        {% component "contactform" %}
+    </div>
+</div>

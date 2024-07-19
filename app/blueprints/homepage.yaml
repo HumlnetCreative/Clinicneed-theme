@@ -1,0 +1,63 @@
+uuid: b51e164f-1bf2-4e94-9f9d-fa8daecea6b3
+handle: Homepage
+type: single
+name: Homepage
+drafts: false
+multisite: true
+
+primaryNavigation:
+    label: Homepage
+    icon: icon-home
+    order: 120
+
+fields:
+    about:
+        label: O nás
+        type: richeditor
+
+    services:
+        label: Služby
+        type: repeater
+        itemsExpanded: false
+        form: 
+            fields:
+                title:
+                    label: Název
+                image:
+                    label: Obrázek
+                    type: fileupload
+                    maxFiles: 1
+
+    partners_title:
+        label: Partneři nadpis
+        span: left
+
+    partners_images:
+        label: Partneři obrázky
+        type: fileupload
+
+    contact_name:
+        label: Jméno a příjmení
+        span: left
+
+    contact_image:
+        label: Fotka
+        span: right
+        type: fileupload
+        maxFiles: 1
+
+    contact_text:
+        label: O mě
+        type: richeditor
+
+    contact_phone_de:
+        label: Telefon DE
+        span: left
+
+    contact_phone_cz:
+        label: Telefon CZ
+        span: right
+
+    contact_email:
+        label: E-mail
+        span: left

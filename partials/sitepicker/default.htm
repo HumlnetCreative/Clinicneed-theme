@@ -1,0 +1,15 @@
+<ul class="nav nav-pills justify-content-between align-items-stretch sitepicker gap-2 ms-5">
+    {% for site in sitepicker.sites %}
+{#        {% if site.code != this.site.code %}#}
+            <li class="nav-item d-inline-flex align-items-center">
+                <a href="{{ site.url }}" class="nav-link d-flex align-items-center justify-content-center rounded-circle text-uppercase ff-secondary {{ site.code == this.site.code ? 'active bg-primary text-white' }}">
+{#                    <img src="{{ ['assets/images/locales/', site.code, '.svg']|join|theme }}" alt="{{ site.code }}" class="me-2">#}
+
+{#                    {{ site.name }}#}
+
+                    {{ site.code }}
+                </a>
+            </li>
+{#        {% endif %}#}
+    {% endfor %}
+</ul>
