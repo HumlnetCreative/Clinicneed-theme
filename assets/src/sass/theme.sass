@@ -26,6 +26,7 @@
             top: 50%
 
         .title
+            line-height: 1.1 !important
             //letter-spacing: 4px
 
 .claim-swiper
@@ -117,6 +118,8 @@
             height: 54px
 
 header
+    z-index: 100
+
     .gradient
         height: 10px
         background: linear-gradient(to right, $primary 0, $primary, 16.66%, $blue-800 16.66%)
@@ -176,3 +179,13 @@ footer
 
         &:not(:first-child)
             border-left: 1px solid $primary
+
+main
+    padding-top: 114px
+
+.back-top
+    transition: $transition-base
+
+    a
+        width: 51px
+        height: 51px

@@ -21,7 +21,7 @@ handle = "Homepage"
 {#            <div class="gradient position-absolute start-0 top-0 w-100 h-100"></div>#}
 
             <div class="info position-absolute start-50 translate-middle-x d-none d-md-block">
-                <p class="title fw-bold text-start text-white fs-1 mb-0 lh-sm ff-secondary">
+                <p class="title fw-bold text-start text-white fs-1 mb-0 ff-secondary">
                     {{ "banner.claim"|trans|raw }}
                 </p>
 
@@ -35,7 +35,7 @@ handle = "Homepage"
 
 {#{% component "quicknews" %}#}
 
-<div class="container-fluid py-6 about" id="{{ "homepage.title"|trans|slug }}">
+<div class="container-fluid py-7 about" id="{{ "homepage.title"|trans|slug }}">
     <div class="container-lg">
         <h1 class="mb-5">
             {{ homepage.title }}
@@ -108,7 +108,7 @@ handle = "Homepage"
                                         DE
                                     </span>
 
-                                    <a href="tel: {{ homepage.contact_phone_de }}" class="ms-1 link-black link-underline-opacity-100 link-underline-opacity-0-hover link-offset-1">
+                                    <a href="tel: {{ homepage.contact_phone_de }}" class="ms-1 link-black link-underline-opacity-0">
                                         {{ homepage.contact_phone_de }}
                                     </a>
                                 </span>
@@ -118,7 +118,7 @@ handle = "Homepage"
                                         CZ
                                     </span>
 
-                                    <a href="tel: {{ homepage.contact_phone_cz }}" class="ms-1 link-black link-underline-opacity-100 link-underline-opacity-0-hover link-offset-1">
+                                    <a href="tel: {{ homepage.contact_phone_cz }}" class="ms-1 link-black link-underline-opacity-0">
                                         {{ homepage.contact_phone_cz }}
                                     </a>
                                 </span>
@@ -134,7 +134,7 @@ handle = "Homepage"
 
                             <p class="mb-0 lh-sm d-flex justify-content-start flex-column">
                                 <span>
-                                    <a href="mailto: {{ homepage.contact_email }}" class="ms-1 link-black link-underline-opacity-100 link-underline-opacity-0-hover link-offset-1">
+                                    <a href="mailto: {{ homepage.contact_email }}" class="ms-1 link-black link-underline-opacity-0">
                                         {{ homepage.contact_email }}
                                     </a>
                                 </span>

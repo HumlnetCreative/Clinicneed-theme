@@ -123,6 +123,23 @@ var scrollableSwiper = new Swiper(".scrollable-swiper", {
     },
 });
 
+const backTopButton = document.querySelector(".back-top");
+
+backTopButton.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+});
+
+window.onscroll = () => {
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+        backTopButton.classList.remove("opacity-0");
+    } else {
+        backTopButton.classList.add("opacity-0");
+    }
+}
+
 $(document).ready(function () {
     $(".dropdown-menu").on("click", "li a", function() {
         $(this).closest(".dropdown-menu").siblings(".dropdown-toggle").find("span").text($(this).text());
