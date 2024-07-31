@@ -64,9 +64,9 @@ handle = "Homepage"
                 {{ homepage.partners_title }}
             </p>
 
-            <div class="row row-cols-2 row-cols-lg-6 gx-7 gy-2">
+            <div class="row row-cols-2 gy-2 gx-5 row-cols-lg-6 gx-lg-7">
                 {% for image in homepage.partners_images %}
-                    <div class="col d-flex align-items-center justify-content-center {{ loop.index == 7 ? 'offset-2' }}">
+                    <div class="col d-flex align-items-center justify-content-center {{ loop.index == 7 ? 'offset-lg-2' }}">
                         <img src="{{ image.path }}" alt="{{ image.description }}" class="img-fluid">
                     </div>
                 {% endfor %}
@@ -77,14 +77,14 @@ handle = "Homepage"
 
 <div class="container-fluid py-7 contact" id="{{ "homepage.contact"|trans|slug }}">
     <div class="container-lg">
-        <div class="row gx-6">
-            <div class="col col-lg-4">
+        <div class="row gx-lg-6">
+            <div class="col-12 col-lg-4">
                 <p class="mb-0">
                     <img src="{{ homepage.contact_image.path }}" alt="{{ homepage.contact_image.description }}" class="img-fluid w-100 rounded-circle">
                 </p>
             </div>
 
-            <div class="col col-lg-8 d-flex align-items-center">
+            <div class="col-12 mt-5 d-flex align-items-center col-lg-8 mt-lg-0">
                 <div>
                     <p class="mb-4 h1">
                         {{ homepage.contact_name }}
@@ -125,7 +125,7 @@ handle = "Homepage"
                             </p>
                         </div>
 
-                        <div class="col fs-2 d-flex flex-row gap-3">
+                        <div class="col fs-2 d-flex flex-row gap-3 mt-4 mt-lg-0">
                             <p class="mb-0 icon">
                                 <span class="bg-primary rounded-circle d-flex align-items-center justify-content-center">
                                     <i class="ph ph-envelope text-white h2 mb-0"></i>
@@ -134,7 +134,7 @@ handle = "Homepage"
 
                             <p class="mb-0 lh-sm d-flex justify-content-start flex-column">
                                 <span>
-                                    <a href="mailto: {{ homepage.contact_email }}" class="ms-1 link-black link-underline-opacity-0">
+                                    <a href="mailto: {{ homepage.contact_email }}" class="link-black link-underline-opacity-0">
                                         {{ homepage.contact_email }}
                                     </a>
                                 </span>

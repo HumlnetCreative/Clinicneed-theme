@@ -7,7 +7,7 @@
                         <a href="{{ 'homepage'|page }}" class="{#mi mi-logo bg-white#}">
                             <!-- Uncomment and remove classes while using normal image as logo -->
 
-                            <img src="{{ 'assets/images/logo-sm.png'|theme }}" alt="logo">
+                            <img src="{{ 'assets/images/logo-sm.svg'|theme }}" alt="logo">
                         </a>
                     </div>
 
@@ -25,6 +25,12 @@
         <div class="container-fluid h-100 overflow-y-scroll my-3 d-flex align-items-center">
             <div class="container-lg">
                 {% component "offcanvasmenu" %}
+            </div>
+        </div>
+
+        <div class="container-fluid py-4">
+            <div class="container-lg">
+                {% component "sitepicker" %}
             </div>
         </div>
 

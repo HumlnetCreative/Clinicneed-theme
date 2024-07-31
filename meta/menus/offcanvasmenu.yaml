@@ -1,36 +1,26 @@
 items:
     -
-        title: Služby
+        title: Dienstleistungen
+        nesting: null
         type: url
-        url: '#sluzby'
+        url: '#dienstleistungen'
         code: ''
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
-    -
-        title: Portfolio
-        type: url
-        url: '#portfolio'
-        code: references
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
-    -
-        title: 'Rodinná tradice'
-        type: url
-        url: '#rodinna-tradice'
-        code: ''
+        reference: null
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
     -
         title: Kontakt
+        nesting: null
         type: url
         url: '#kontakt'
         code: ''
+        reference: null
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''

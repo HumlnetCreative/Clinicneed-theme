@@ -173,15 +173,13 @@ footer
     a
         transition: $transition-base
 
-    .column
-        &:not(:last-child)
-            border-right: 1px solid $primary
+    @include media-breakpoint-up(lg)
+        .column
+            &:not(:last-child)
+                border-right: 1px solid $primary
 
-        &:not(:first-child)
-            border-left: 1px solid $primary
-
-main
-    padding-top: 114px
+            &:not(:first-child)
+                border-left: 1px solid $primary
 
 .back-top
     transition: $transition-base
@@ -189,3 +187,8 @@ main
     a
         width: 51px
         height: 51px
+
+#offcanvas
+    .sitepicker
+        justify-content: center !important
+        margin-left: 0 !important
