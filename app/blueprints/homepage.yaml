@@ -61,3 +61,7 @@ fields:
     contact_email:
         label: E-mail
         span: left
+
+    coop_images:
+        label: Partneři obrázky
+        type: fileupload

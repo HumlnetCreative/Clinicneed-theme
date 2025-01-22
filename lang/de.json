@@ -4,5 +4,6 @@
     "homepage.contact": "Kontakt",
     "homepage.contact.form.name": "Name und Nachname",
     "homepage.contact.form.email": "E-mail",
-    "homepage.contact.form.text": "Nachricht"
+    "homepage.contact.form.text": "Nachricht",
+    "homepage.coop": "Kooperationspartner"
 }
