@@ -13,6 +13,15 @@ items:
             cssClass: ''
             isExternal: '0'
     -
+        title: Kooperationspartner
+        type: url
+        url: '#kooperationspartner'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
         title: Kontakt
         nesting: null
         type: url
