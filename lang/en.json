@@ -1,0 +1,11 @@
+{
+    "banner.claim": "<span>CLINICNEED</span><span>MEDICAL SUPPLIER</span>",
+    "homepage.activity": "Activity",
+    "homepage.activity.heading": "Description of activity",
+    "homepage.products": "Products",
+    "homepage.team": "Who we are",
+    "homepage.contact": "Contact",
+    "homepage.contact.form.name": "Name und Nachname",
+    "homepage.contact.form.email": "E-mail",
+    "homepage.contact.form.text": "Nachricht"
+}

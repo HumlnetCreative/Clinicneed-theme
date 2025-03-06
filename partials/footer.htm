@@ -2,8 +2,8 @@
     <div class="top container-fluid py-5">
         <div class="container-lg">
             <div class="d-flex flex-column justify-content-center gap-4 flex-lg-row gap-lg-0">
-                <div class="column d-flex px-0 px-lg-4">
-                    <p class="mb-0 lh-sm d-flex justify-content-start align-items-end flex-column">
+                <div class="column d-flex px-0 px-lg-4 justify-content-center">
+                    <p class="mb-0 lh-sm d-flex justify-content-start align-items-center flex-column align-items-lg-end">
                         <span class="mb-2">
                             Anschrift:
                         </span>
@@ -22,32 +22,32 @@
                     </p>
                 </div>
 
-                <div class="column d-flex px-0 px-lg-4">
-                    <p class="mb-0 lh-sm d-flex justify-content-center flex-column">
+                <div class="column d-flex px-0 px-lg-4 justify-content-center justify-content-lg-start">
+                    <p class="mb-0 lh-sm d-flex justify-content-center flex-column align-items-cente align-items-lg-start">
                         <span class="d-flex align-items-center gap-2">
                             <span class="text-white d-inline-flex">
-                                <i class="ph ph-phone-call"></i>
+                                <i class="ph ph-phone-call text-primary"></i>
                             </span>
 
-                            <a href="tel: {{ homepage.contact_phone_de }}" class="link-white text-decoration-none">
-                                {{ homepage.contact_phone_de }}
+                            <a href="tel:{{ this.theme.phone }}" class="link-black text-decoration-none">
+                                {{ this.theme.phone }}
                             </a>
                         </span>
 
                         <span class="d-flex align-items-center gap-2">
                             <span class="text-white d-inline-flex">
-                                <i class="ph ph-envelope"></i>
+                                <i class="ph ph-envelope text-primary"></i>
                             </span>
 
-                            <a href="tel: {{ homepage.contact_email }}" class="link-white text-decoration-none">
-                                {{ homepage.contact_email }}
+                            <a href="mailto:{{ this.theme.email }}" class="link-black text-decoration-none">
+                                {{ this.theme.email }}
                             </a>
                         </span>
                     </p>
                 </div>
 
-                <div class="column d-flex px-0 px-lg-4">
-                    <p class="mb-0 lh-sm d-flex justify-content-center flex-column">
+                <div class="column d-flex px-0 px-lg-4 justify-content-center justify-content-lg-start">
+                    <p class="mb-0 lh-sm d-flex justify-content-center flex-column align-items-center align-items-lg-start">
                         <span>
                             Umsatzsteuer-IdNr.: DE
                         </span>
@@ -60,28 +60,33 @@
                     </p>
                 </div>
 
-                <div class="column d-flex px-0 px-lg-4">
-                    <div class="socials d-inline-flex align-items-center gap-3 justify-content-start">
-                        {% if this.theme.facebook %}
-                            <a href="{{ this.theme.facebook }}" target="_blank" class="d-inline-flex text-decoration-none">
-                                <i class="ph ph-facebook-logo"></i>
+                <div class="column d-flex px-0 px-lg-4 justify-content-center justify-content-lg-start">
+{#                    <div class="socials d-inline-flex align-items-center gap-3 justify-content-start">#}
+{#                        {% if this.theme.facebook %}#}
+{#                            <a href="{{ this.theme.facebook }}" target="_blank" class="d-inline-flex text-decoration-none">#}
+{#                                <i class="ph ph-facebook-logo"></i>#}
 {#                                    <i class="mi mi-facebook icon"></i>#}
-                            </a>
-                        {% endif %}
+{#                            </a>#}
+{#                        {% endif %}#}
 
-                        {% if this.theme.instagram %}
-                            <a href="{{ this.theme.instagram }}" target="_blank" class="d-inline-flex text-decoration-none">
-                                <i class="ph ph-instagram-logo"></i>
+{#                        {% if this.theme.instagram %}#}
+{#                            <a href="{{ this.theme.instagram }}" target="_blank" class="d-inline-flex text-decoration-none">#}
+{#                                <i class="ph ph-instagram-logo"></i>#}
 {#                                    <i class="mi mi-instagram icon"></i>#}
-                            </a>
-                        {% endif %}
+{#                            </a>#}
+{#                        {% endif %}#}
 
-                        {% if this.theme.youtube %}
-                            <a href="{{ this.theme.youtube }}" target="_blank" class="d-inline-flex text-decoration-none">
-                                <i class="ph ph-youtube-logo"></i>
-                            </a>
-                        {% endif %}
-                    </div>
+{#                        {% if this.theme.youtube %}#}
+{#                            <a href="{{ this.theme.youtube }}" target="_blank" class="d-inline-flex text-decoration-none">#}
+{#                                <i class="ph ph-youtube-logo"></i>#}
+{#                            </a>#}
+{#                        {% endif %}#}
+{#                    </div>#}
+                    <p class="mb-0 d-flex align-items-center justify-content-center justify-content-lg-start">
+                        <a href="https://www.hucr.cz" target="_blank">
+                            <img src="{{ 'assets/images/signature.svg'|theme }}" alt="Tvorba webových stránek">
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -89,7 +94,7 @@
 </footer>
 
 <div class="back-top position-fixed bottom-0 end-0 me-5 mb-5 opacity-0">
-    <a href="" class="bg-secodary-800 link-white text-decoration-none h2 mb-0 d-inline-flex align-items-center justify-content-center rounded-circle">
+    <a href="" class="bg-secodary-800 link-white text-decoration-none fs-3 mb-0 d-inline-flex align-items-center justify-content-center rounded-circle">
         <i class="ph ph-arrow-up"></i>
     </a>
 </div>

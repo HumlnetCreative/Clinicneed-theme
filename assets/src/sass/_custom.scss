@@ -30,11 +30,11 @@ $brown-300:                             #867773;
 $brown-200:                             #F7E4D9;
 $brown-100:                             #EDEBEA;
 
-$blue-800:                              #231556;
-$blue-500:                              #0093FF;
-$blue-100:                              #e8f4f7;
+$blue-800:                              #20A0D8;
+$blue-500:                              #80D0F4;
+$blue-100:                              #BFE7F9;
 
-$primary:                               $red-500;
+$primary:                               $blue-800;
 $secondary:                             $blue-500;
 $dark:                                  $gray-500;
 $light:                                 $gray-200;
@@ -60,10 +60,10 @@ $font-size-sm:                          .75rem;     // 12px
 $font-sizes: (
     //1:                                  5rem,           // 80px
     1:                                  7.75rem,        // 124px
-    2:                                  1.25rem,        // 20px
-    3:                                  1.125rem,       // 18px
-    4:                                  .9375rem,       // 15px
-    5:                                  0.875rem,       // 13px
+    2:                                  3rem,           // 48px
+    3:                                  2rem,           // 32px
+    4:                                  1.3rem,         // 21px
+    5:                                  1rem,           // 16px
     6:                                  $font-size-sm,  // 12px
 );
 
@@ -83,10 +83,10 @@ $spacers: (
 $line-height-base:                      1.5;
 
 $headings-font-family:                  $font-family-serif;
-$headings-font-weight:                  $font-weight-bold;
+$headings-font-weight:                  $font-weight-semibold;
 $headings-color:                        $black;
 
-$header-bg:                             $white;
+$header-bg:                             lighten($blue-100, 10%);
 $header-border-color:                   $gray-300;
 $header-border-width:                   1px;
 $header-position-absolute:              false;
@@ -100,7 +100,7 @@ $header-socials-icon-hover-color:       $primary;
 $header-socials-icon-font-size:         map-get($font-sizes, 2);
 
 $header-phone-font-size:                map-get($font-sizes, 5);
-$header-phone-font-weight:              $font-weight-bold;
+$header-phone-font-weight:              $font-weight-regular;
 $header-phone-link-color:               $black;
 $header-phone-link-hover-color:         $primary;
 $header-phone-icon-color:               $black;
@@ -125,10 +125,10 @@ $header-sitepicker-nav-level-1-link-font-size:      $header-sitepicker-nav-link-
 $header-sitepicker-nav-level-1-link-padding-x:      15px;
 $header-sitepicker-nav-level-1-link-padding-y:      5px;
 
-//$h1-font-size:                          2.5rem;             // 40px
-$h1-font-size:                          4.5rem;             // 72px
-$h2-font-size:                          2rem;               // 32px
-$h3-font-size:                          1.5rem;             // 24px
+$h1-font-size:                          6rem;               // 96px
+$h2-font-size:                          4.5rem;             // 72px
+$h3-font-size:                          3rem;               // 48px
+$h4-font-size:                          1.5rem;             // 24px
 
 $link-color:                            $primary;
 $link-hover-color:                      $black;
@@ -143,7 +143,7 @@ $nav-link-after-height:                 0;        // 0 for turn off
 $nav-link-padding-x:                    0;
 $nav-link-padding-y:                    0;
 $nav-link-font-weight:                  $font-weight-regular;
-$nav-link-font-size:                    map-get($font-sizes, 2);
+$nav-link-font-size:                    map-get($font-sizes, 4);
 $nav-link-font-family:                  $font-family-serif;
 $nav-link-gap:                          map-get($spacers, 5);
 $nav-link-text-uppercase:               false;
@@ -196,16 +196,16 @@ $card-border-radius:                    $border-radius;
 
 $offcanvas-toggler-font-size:           $font-size-sm;
 $offcanvas-toggler-color:               $black;
-$offcanvas-toggler-icon-font-size:      $h2-font-size;
+$offcanvas-toggler-icon-font-size:      $h3-font-size;
 $offcanvas-toggler-close-color:         $black;
-$offcanvas-bg-color:                    $white;
+$offcanvas-bg-color:                    lighten($blue-100, 10%);
 $offcanvas-socials-icon-color:          $black;
 $offcanvas-socials-link-color:          $black;
 $offcanvas-socials-link-font-size:      $h2-font-size;
 
 $offcanvas-nav-link-color:              $black;
-$offcanvas-nav-link-font-size:          $h3-font-size;
-$offcanvas-nav-link-font-weight:        $font-weight-bold;
+$offcanvas-nav-link-font-size:          $h4-font-size;
+$offcanvas-nav-link-font-weight:        $font-weight-regular;
 
 $offcanvas-nav-level-1-link-color:          $offcanvas-nav-link-color;
 $offcanvas-nav-level-1-link-font-size:      map-get($font-sizes, 4);
@@ -257,9 +257,9 @@ $badge-padding-x:                       10px;
 $badge-padding-y:                       6px;
 $badge-border-radius:                   30px;
 
-$footer-font-size:                      map-get($font-sizes, 2);
-$footer-color:                          $white;
-$footer-bg:                             $blue-800;
+$footer-font-size:                      map-get($font-sizes, 5);
+$footer-color:                          $black;
+$footer-bg:                             $blue-100;
 
 $footer-logo-bg:                        $black;
 $footer-logo-hover-bg:                  $primary;
@@ -563,14 +563,18 @@ $utilities: map-merge(
 
 .link {
     &-black {
+        transition: $transition-base;
+
         &:hover {
             color: $primary !important;
         }
     }
 
     &-white {
+        transition: $transition-base;
+
         &:hover {
-            color: $primary !important;
+            color: $blue-100 !important;
             text-decoration-color: $primary !important;
         }
     }

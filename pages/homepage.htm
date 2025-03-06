@@ -21,7 +21,7 @@ handle = "Homepage"
 {#            <div class="gradient position-absolute start-0 top-0 w-100 h-100"></div>#}
 
             <div class="info position-absolute start-50 translate-middle-x d-block">
-                <p class="title fw-bold text-start text-white fs-1 mb-0 ff-secondary">
+                <p class="title fw-bold text-start text-white mb-0 ff-secondary text-center">
                     {{ "banner.claim"|trans|raw }}
                 </p>
 
@@ -35,146 +35,100 @@ handle = "Homepage"
 
 {#{% component "quicknews" %}#}
 
-<div class="container-fluid py-7 about" id="{{ "homepage.title"|trans|slug }}">
+<div class="container-fluid py-6 activity" id="{{ "homepage.activity"|trans|slug }}">
     <div class="container-lg">
-        <h1 class="mb-5">
-            {{ homepage.title }}
-        </h1>
-
-        <div class="mb-5 text-dark fs-2">
-            {{ homepage.about|raw }}
-        </div>
-
-        <div class="mb-6 row row-cols-1 row-cols-lg-3 g-5">
-            {% for service in homepage.services %}
-                <div class="col">
-                    <h2 class="mb-5">
-                        {{ service.title|raw }}
-                    </h2>
-
-                    <p class="mb-0">
-                        <img src="{{ service.image.thumb(390, 259, {"mode": "crop"}) }}" alt="{{ service.image.description }}" class="img-fluid w-100">
-                    </p>
-                </div>
-            {% endfor %}
-        </div>
-
-        <div>
-            <p class="text-dark text-center fs-2 mb-4">
-                {{ homepage.partners_title }}
-            </p>
-
-            <div class="row row-cols-2 gy-2 gx-5 row-cols-lg-6 gx-lg-7">
-                {% for image in homepage.partners_images %}
-                    <div class="col d-flex align-items-center justify-content-center">
-                        <img src="{{ image.path }}" alt="{{ image.description }}" class="img-fluid">
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container-fluid py-7 contact" id="{{ "homepage.contact"|trans|slug }}">
-    <div class="container-lg">
-        <div class="row gx-lg-6">
-            <div class="col-12 col-lg-4">
-                <p class="mb-0">
-                    <img src="{{ homepage.contact_image.path }}" alt="{{ homepage.contact_image.description }}" class="img-fluid w-100 rounded-circle">
-                </p>
-            </div>
-
-            <div class="col-12 mt-5 d-flex align-items-center col-lg-8 mt-lg-0">
-                <div>
-                    <p class="mb-4 h1">
-                        {{ homepage.contact_name }}
-                    </p>
-
-                    <div class="text-dark fs-2 mb-5">
-                        {{ homepage.contact_text|raw }}
-                    </div>
-
-                    <div class="row row-cols-1 row-cols-lg-2">
-                        <div class="col fs-2 d-flex flex-row gap-3">
-                            <p class="mb-0 icon">
-                                <span class="bg-primary rounded-circle d-flex align-items-center justify-content-center">
-                                    <i class="ph ph-phone-call text-white h2 mb-0"></i>
-                                </span>
-                            </p>
-
-                            <p class="mb-0 lh-sm d-flex justify-content-center flex-column">
-                                <span>
-                                    <span class="text-black">
-                                        DE
-                                    </span>
-
-                                    <a href="tel: {{ homepage.contact_phone_de }}" class="ms-1 link-black link-underline-opacity-0">
-                                        {{ homepage.contact_phone_de }}
-                                    </a>
-                                </span>
-
-                                {% if homepage.contact_phone_cz %}
-                                    <span>
-                                        <span class="text-black">
-                                            CZ
-                                        </span>
-
-                                        <a href="tel: {{ homepage.contact_phone_cz }}" class="ms-1 link-black link-underline-opacity-0">
-                                            {{ homepage.contact_phone_cz }}
-                                        </a>
-                                    </span>
-                                {% endif %}
-                            </p>
-                        </div>
-
-                        <div class="col fs-2 d-flex flex-row gap-3 mt-4 mt-lg-0">
-                            <p class="mb-0 icon">
-                                <span class="bg-primary rounded-circle d-flex align-items-center justify-content-center">
-                                    <i class="ph ph-envelope text-white h2 mb-0"></i>
-                                </span>
-                            </p>
-
-                            <p class="mb-0 lh-sm d-flex justify-content-center flex-column">
-                                <span>
-                                    <a href="mailto: {{ homepage.contact_email }}" class="link-black link-underline-opacity-0">
-                                        {{ homepage.contact_email }}
-                                    </a>
-                                </span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container-fluid pb-6" id="{{ "homepage.coop"|trans|slug }}">
-    <div class="container-lg">
-        <h2 class="h1 mb-5">
-            {{ "homepage.coop"|trans }}
+        <h2 class="mb-5 text-center">
+            {{ "homepage.activity.heading"|trans }}
         </h2>
 
-        <div class="row row-cols-2 gy-2 gx-5 row-cols-md-3 gx-lg-7 row-cols-xl-4">
-            {% for image in homepage.coop_images %}
-                <div class="col d-flex flex-column align-items-center justify-content-center">
-                    <img src="{{ image.path }}" alt="{{ image.description }}" class="img-fluid">
+        <div class="row row-cols-1 g-5 row-cols-md-3 g-xl-6">
+            {% for activity in homepage.activities %}
+                <div class="col text-center">
+                    <p class="mb-4">
+                        <span class="border border-2 border-dark rounded-circle fs-3 d-inline-flex align-items-center justify-content-center">
+                            {{ loop.index == 1 ? "A" : (loop.index == 2 ? "B" : "C") }}
+                        </span>
+                    </p>
 
-                    <span class="mt-2 small">
-                        {{ image.title }}
-                    </span>
+                    {{ activity.text|content }}
                 </div>
             {% endfor %}
         </div>
     </div>
 </div>
 
-<div class="container-fluid py-6 bg-light" id="contact-form">
+<div class="container-fluid py-6 bg-light products" id="{{ "homepage.products"|trans|slug }}">
     <div class="container-lg">
-        <h2 class="h1 mb-5">
+        <h2 class="mb-5 text-center">
+            {{ "homepage.products"|trans }}
+        </h2>
+
+        <div class="d-flex flex-column gap-5">
+            {% for product in homepage.products %}
+                <div class="product">
+                    <h3 class="mb-4 h4">
+                        {{ product.title }}
+                    </h3>
+
+                    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+                        {% for image in product.images %}
+                            <div class="col">
+                                <a href="{{ image.path }}" class="image-link">
+                                    <img src="{{ image.thumb(600, 400, {mode: "crop"}) }}" alt="{{ image.description }}" class="img-fluid w-100">
+                                </a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid py-6 team" id="{{ "homepage.team"|trans|slug }}">
+    <div class="container-lg">
+        <h2 class="mb-5 text-center">
+            {{ "homepage.team"|trans }}
+        </h2>
+
+        <div class="d-flex flex-column gap-6">
+            {% for member in homepage.team %}
+                <div class="row gx-lg-6">
+                    <div class="col-8 offset-2 col-sm-6 offset-sm-3 col-md-4 offset-md-4 col-lg-5 offset-lg-0 col-xl-3">
+                        <p class="mb-0">
+                            <img src="{{ member.image.path }}" alt="{{ member.image.description }}" class="img-fluid w-100 rounded-circle">
+                        </p>
+                    </div>
+
+                    <div class="col-12 mt-5 d-flex align-items-center col-lg-7 mt-lg-0 col-xl-9">
+                        <div>
+                            <p class="mb-4 h3 text-center text-lg-start">
+                                {{ member.name }}
+                            </p>
+
+                            <div class="text-dark fs-4">
+                                {{ member.text|raw }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid py-6 bg-light contact" id="{{ "homepage.contact"|trans|slug }}">
+    <div class="container-lg">
+        <h2 class="mb-5 text-center">
             {{ "homepage.contact"|trans }}
         </h2>
 
-        {% component "contactform" %}
+        <div class="fs-4 text-center">
+            {{ homepage.contact_text|content }}
+
+            <p class="mb-0 mt-5">
+                <img src="{{ 'assets/images/caduceus.svg'|theme }}" alt="Caduceus">
+            </p>
+        </div>
     </div>
 </div>

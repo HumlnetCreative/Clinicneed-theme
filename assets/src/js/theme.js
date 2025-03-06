@@ -28,6 +28,17 @@ offcanvasCollapse.addEventListener("hide.bs.collapse", event => {
 
 /*************** END CORE FUNCTION **************/
 
+const products = document.querySelectorAll(".product");
+
+products.forEach((product) => {
+    lightGallery(product, {
+        selector: ".image-link",
+        plugins: [lgZoom, lgThumbnail],
+        speed: 500,
+        galleryId: 1,
+    });
+});
+
 lightGallery(document.getElementById("reference-images"), {
     selector: ".image-link",
     plugins: [lgZoom, lgThumbnail],

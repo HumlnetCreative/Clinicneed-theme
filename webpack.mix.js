@@ -24,7 +24,7 @@ mix.setPublicPath("assets/")
     .copy("node_modules/@phosphor-icons/web/src/fill/Phosphor*", "assets/css/")
     .copy("assets/src/fonts/*", "assets/fonts/")
     .browserSync({
-        proxy: "localhost83/hucr/handex.cz",
+        proxy: "localhost83/hucr/clinicneed.com",
         files: [
             "layouts/**/*",
             "pages/**/*",

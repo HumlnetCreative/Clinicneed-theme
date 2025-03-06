@@ -1,9 +1,9 @@
-name: Handex
-description: 'Air conditioners handling company.'
+name: Clinicneed
+description: 'Theme for company supplying medical products, equipment and accessories needed by clinics and hospitals.'
 author: 'Lukáš Záplata'
 homepage: ''
 authorCode: LZaplata
-code: handex
+code: clinicneed
 parent: ''
 database: '0'
 require:

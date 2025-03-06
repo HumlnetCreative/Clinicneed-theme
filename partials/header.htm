@@ -4,12 +4,13 @@
         <div class="container-fluid"> {#uncomment while fluid header #}
             <div class="d-flex align-items-center justify-content-between row row-cols-lg-3">
                 <div class="col col-lg-2 d-flex py-3">
-                    <a href="{{ 'homepage'|page }}" class="d-flex align-items-center logo">
-                        <img src="{{ 'assets/images/logo.svg'|theme }}" alt="logo">
+                    <a href="{{ 'homepage'|page }}" class="d-flex align-items-center logo link-black text-decoration-none fs-3 fw-bold">
+{#                        <img src="{{ 'assets/images/logo.svg'|theme }}" alt="logo">#}
+                        CLINICNEED
                     </a>
                 </div>
 
-                <div class="col-lg-10 d-none d-xl-flex justify-content-end align-self-stretch">
+                <div class="col-lg-8 d-none d-xl-flex justify-content-center align-self-stretch">
                     {% component "mainmenu" %}
 
                     {% if sitepicker.isEnabled %}
@@ -17,16 +18,16 @@
                     {% endif %}
                 </div>
 
-{#                <div class="col-lg-1 d-none d-xl-flex align-self-stretch justify-content-end gap-4">#}
-{#                    {% if this.theme.phone %}#}
-{#                        <div class="phone d-inline-flex align-items-center gap-2">#}
-{#                            <i class="ph ph-device-mobile icon"></i>#}
+                <div class="col-lg-2 d-none d-xl-flex align-self-stretch justify-content-end gap-4">
+                    {% if this.theme.phone %}
+                        <div class="phone d-inline-flex align-items-center gap-2">
+                            <i class="ph ph-device-mobile icon"></i>
 
-{#                            <a href="tel: {{ this.theme.phone }}" target="_blank" class="text-decoration-none text-nowrap">#}
-{#                                {{ this.theme.phone }}#}
-{#                            </a>#}
-{#                        </div>#}
-{#                    {% endif %}#}
+                            <a href="tel: {{ this.theme.phone }}" target="_blank" class="text-decoration-none text-nowrap">
+                                {{ this.theme.phone }}
+                            </a>
+                        </div>
+                    {% endif %}
 
 {#                    <div class="search">#}
 {#                        <a href="" class="d-flex align-items-center">#}
@@ -75,7 +76,7 @@
 {#                            </li>#}
 {#                        </ul>#}
 {#                    {% endif %}#}
-{#                </div>#}
+                </div>
 
                 <div class="col text-end d-xl-none">
                     <a href="#offcanvas" data-bs-toggle="offcanvas" class="d-inline-flex align-items-center offcanvas-toggler text-decoration-none">

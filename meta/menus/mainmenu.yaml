@@ -1,9 +1,18 @@
 items:
     -
-        title: Dienstleistungen
+        title: Activity
+        type: url
+        url: '#activity'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Products
         nesting: null
         type: url
-        url: '#dienstleistungen'
+        url: '#products'
         code: ''
         reference: null
         cmsPage: null
@@ -13,19 +22,23 @@ items:
             cssClass: ''
             isExternal: '0'
     -
-        title: Kooperationspartner
+        title: 'Who we are'
+        nesting: null
         type: url
-        url: '#kooperationspartner'
+        url: '#who-we-are'
         code: ''
+        reference: null
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
     -
-        title: Kontakt
+        title: Contact
         nesting: null
         type: url
-        url: '#kontakt'
+        url: '#contact'
         code: ''
         reference: null
         cmsPage: null

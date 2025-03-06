@@ -27,7 +27,7 @@
 
         .title
             line-height: 1.1 !important
-            //letter-spacing: 4px
+            font-size: $h1-font-size
 
             @include media-breakpoint-down(xl)
                 font-size: 4.5rem !important
@@ -43,17 +43,21 @@
 
             span
                 position: relative
-                margin-bottom: 25px
                 display: inline-block
+                background-color: rgba($black, .4)
+                padding: 0 10px
 
-                &:after
-                    content: ""
-                    width: 100%
-                    height: 1px
-                    background-color: $white
-                    position: absolute
-                    left: 0
-                    bottom: 0
+                &:first-child
+                    margin-bottom: 10px
+
+                //&:after
+                //    content: ""
+                //    width: 100%
+                //    height: 1px
+                //    background-color: $white
+                //    position: absolute
+                //    left: 0
+                //    bottom: -12px
 
 .claim-swiper
     padding-bottom: 50px !important
@@ -147,13 +151,13 @@ header
     z-index: 100
 
     .gradient
-        height: 10px
-        background: linear-gradient(to right, $primary 0, $primary, 16.66%, $blue-800 16.66%)
+        height: 5px
+        background: linear-gradient(to right, $primary 0, $secondary 100%)
 
 .about
     background: linear-gradient(to bottom, $white, $gray-100)
 
-.contact
+.team
     .icon
         span
             width: 51px
@@ -161,6 +165,23 @@ header
 
     a
         transition: $transition-base
+
+    ul
+        padding-left: 20px
+        margin: 0
+
+.contact
+    img
+        max-height: 130px
+
+.activity
+    .border
+        width: 50px
+        height: 50px
+
+    p
+        &:last-child
+            margin-bottom: 0
 
 #scf-contactform
     form
