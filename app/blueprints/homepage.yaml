@@ -1,4 +1,4 @@
-uuid: b51e164f-1bf2-4e94-9f9d-fa8daecea6b3
+uuid: clinicneed_homepage
 handle: Homepage
 type: single
 name: Homepage
@@ -8,60 +8,49 @@ multisite: true
 primaryNavigation:
     label: Homepage
     icon: icon-home
-    order: 120
+    order: 10
 
 fields:
-    about:
-        label: O nás
-        type: richeditor
+    activities:
+        label: Aktivity
+        type: repeater
+        itemsExpanded: false
+        form: 
+            fields:
+                text:
+                    label: Text
+                    type: richeditor
 
-    services:
-        label: Služby
+    products:
+        label: Produkty
         type: repeater
         itemsExpanded: false
         form: 
             fields:
                 title:
-                    label: Název
+                    label: Titulek
+                images:
+                    label: Obrázky
+                    type: fileupload
+                    fileTypes: png, jpg, jpeg, webp
+
+    team:
+        label: Kdo jsme
+        type: repeater
+        itemsExpanded: false
+        form: 
+            fields:
+                name:
+                    label: Jméno
                 image:
-                    label: Obrázek
+                    label: Fotka
                     type: fileupload
                     maxFiles: 1
-
-    partners_title:
-        label: Partneři nadpis
-        span: left
-
-    partners_images:
-        label: Partneři obrázky
-        type: fileupload
-
-    contact_name:
-        label: Jméno a příjmení
-        span: left
-
-    contact_image:
-        label: Fotka
-        span: right
-        type: fileupload
-        maxFiles: 1
+                    fileTypes: png, jpg, jpeg, webp
+                text:
+                    label: Text
+                    type: richeditor
 
     contact_text:
-        label: O mě
+        label: Kontakt
         type: richeditor
-
-    contact_phone_de:
-        label: Telefon DE
-        span: left
-
-    contact_phone_cz:
-        label: Telefon CZ
-        span: right
-
-    contact_email:
-        label: E-mail
-        span: left
-
-    coop_images:
-        label: Partneři obrázky
-        type: fileupload
