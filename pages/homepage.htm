@@ -91,22 +91,22 @@ handle = "Homepage"
             {{ "homepage.team"|trans }}
         </h2>
 
-        <div class="d-flex flex-column gap-6">
+        <div class="row row-cols-1 gy-6 row-cols-lg-2 gx-lg-6">
             {% for member in homepage.team %}
-                <div class="row gx-lg-6">
-                    <div class="col-8 offset-2 col-sm-6 offset-sm-3 col-md-4 offset-md-4 col-lg-5 offset-lg-0 col-xl-3">
+                <div class="col">
+                    <div class="col-8 offset-2 col-sm-6 offset-sm-3 col-md-4 offset-md-4 col-lg-6 offset-lg-3">
                         <p class="mb-0">
                             <img src="{{ member.image.path }}" alt="{{ member.image.description }}" class="img-fluid w-100 rounded-circle">
                         </p>
                     </div>
 
-                    <div class="col-12 mt-5 d-flex align-items-center col-lg-7 mt-lg-0 col-xl-9">
+                    <div class="mt-5">
                         <div>
-                            <p class="mb-4 h3 text-center text-lg-start">
+                            <p class="mb-4 h3 text-center">
                                 {{ member.name }}
                             </p>
 
-                            <div class="text-dark fs-4">
+                            <div class="text-dark fs-4 text-center team-member__text">
                                 {{ member.text|raw }}
                             </div>
                         </div>
