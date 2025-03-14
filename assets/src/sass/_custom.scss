@@ -230,11 +230,11 @@ $slider-pagination-inactive-width:      20px;
 $slider-pagination-height:              5px;
 $slider-pagination-border-radius:       10px;
 
-$btn-border-radius:                     30px;
+$btn-border-radius:                     0;
 //$btn-border-width:                      1.5px;
 $btn-font-weight:                       $font-weight-regular;
-$btn-font-size:                         map-get($font-sizes, 2);
-$btn-padding-x:                         40px;
+$btn-font-size:                         map-get($font-sizes, 5);
+$btn-padding-x:                         30px;
 $btn-padding-y:                         15px;
 $btn-padding-x-sm:                      20px;
 $btn-padding-y-sm:                      10px;
