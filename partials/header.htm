@@ -21,11 +21,19 @@
                 <div class="col-lg-2 d-none d-xl-flex align-self-stretch justify-content-end gap-4">
                     {% if this.theme.phone %}
                         <div class="phone d-inline-flex align-items-center gap-2">
-                            <i class="ph ph-device-mobile icon"></i>
+                            <i class="ph ph-phone icon"></i>
 
                             <a href="tel: {{ this.theme.phone }}" target="_blank" class="text-decoration-none text-nowrap">
                                 {{ this.theme.phone }}
                             </a>
+
+                            <span class="text-black">
+                                -
+                            </span>
+
+                            <span class="text-black">
+                                WhatsApp
+                            </span>
                         </div>
                     {% endif %}
 
